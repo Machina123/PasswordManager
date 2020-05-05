@@ -80,6 +80,13 @@ class EntriesFragment : Fragment("My View") {
                 fieldset("Actions") {
                     hgrow = Priority.ALWAYS
                     spacing = 8.0
+                    button("Password generator") {
+                        maxWidth = Double.MAX_VALUE
+                        hgrow = Priority.ALWAYS
+                        action {
+                            find<PasswordGeneratorFragment>().openWindow()
+                        }
+                    }
                     button("New entry") {
                         maxWidth = Double.MAX_VALUE
                         hgrow = Priority.ALWAYS
